@@ -9,7 +9,8 @@
         <% cocktail.doses.each do |dose| %>
         <p><%= dose.description %> <%= dose.ingredient.name %> </p>
         <% end %>
-        <a href="http://localhost:3000/cocktails/${:id}" class="btn btn-primary">Details</a>
+<!--         <a href="http://localhost:3000/cocktails/${:id}" class="btn btn-primary">Details</a> -->
+<%= link_to "Details", cocktail_path(cocktail), class: "btn btn-primary"  %>
       </div>
     </div>
   </div>
