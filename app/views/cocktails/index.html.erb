@@ -1,19 +1,15 @@
 
-<div class="container">
+<div class="container ">
   <div class="wrapper">
     <div class="row">
-      <div class="col-12">
-        <h1>List all the available cocktails</h1>
         <% @cocktails.each do |cocktail| %>
-        <div class="card-deck">
+        <div class="card-deck m-2">
         <%= render "card", cocktail: cocktail %>
           </div>
-          <h3><%= cocktail.name %></h3>
           <% cocktail.ingredients.each do |ingredient| %>
-            <h2><%= ingredient.name %></h2>
+              <h2><%= ingredient.name %></h2>
           <% end %>
         <% end %>
-      </div>
     </div>
   </div>
 </div>
