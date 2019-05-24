@@ -5,16 +5,18 @@
         <h2><%= @cocktail.name %></h2>
         <%= cl_image_tag @cocktail.photo, height: 250, width: 400, crop: :fill %>
         <% @cocktail.doses.each do |dose| %>
-        <li class="p-2 m-2"><%= dose.ingredient.name %></li>
-        <%= link_to "Delete", dose_path(dose),class: "btn btn-success", method: :delete, data: { confirm: "Really?"} %>
+          <li class="p-2 m-2"><%= dose.ingredient.name %></li>
+          <%= link_to "Delete", dose_path(dose),class: "btn btn-success", method: :delete, data: { confirm: "Really?"} %>
         <% end %>
+        <div class="row d-flex mt-3">
+          <div class="mx-3">
+            <%= link_to "home", root_path,class: "btn btn-warning" %>
+          </div>
+          <div class="">
+            <%= link_to "Add a Dose", new_cocktail_dose_path(@cocktail),class: "btn btn-success"  %>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="m-2">
-      <%= link_to "home", root_path,class: "btn btn-warning" %>
-    </div>
   </div>
-    <div class="m-2">
-      <%= link_to "Add a Dose", new_cocktail_dose_path(@cocktail),class: "btn btn-success"  %>
-    </div>
 </div>
