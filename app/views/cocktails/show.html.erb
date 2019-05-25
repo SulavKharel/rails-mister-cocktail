@@ -7,7 +7,7 @@
 
         <div class="container-fluid card-body ">
           <% @cocktail.doses.each do |dose| %>
-            <span class="p-1 m-1"><h3><%= dose.ingredient.name %></h3></span>
+            <span class="p-1 m-1"><h4><%= dose.description %> :: <%= dose.ingredient.name %></h4></span>
             <%= link_to dose_path(dose), class: "mt-2 text-danger", method: :delete, data: { confirm: "Really?"} do %>
              <h5><i class="fas fa-trash"></i></h5>
             <% end %>
