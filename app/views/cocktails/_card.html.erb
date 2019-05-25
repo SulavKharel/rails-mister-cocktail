@@ -6,9 +6,6 @@
       <%= cl_image_tag cocktail.photo, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
       <div class="card-body">
         <h4 class="card-title"><%= cocktail.name %></h4>
-
-        <p><%= cocktail.dose_first.description %> :: <%= cocktail.dose_first.ingredient.name %> ...</p>
-
         <%= link_to "Details", cocktail_path(cocktail), class: "btn btn-primary"  %>
       </div>
     </div>
