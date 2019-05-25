@@ -1,11 +1,11 @@
-<div class="container ">
-  <div class="wrapper">
-    <div class="row d-flex align-items-center">
-        <% @cocktails.each do |cocktail| %>
-          <div class="card-deck m-3  ">
-          <%= render "card", cocktail: cocktail %>
-          </div>
-        <% end %>
+  <div class="container">
+    <div class="wrapper">
+      <div class="row d-flex align-items-center">
+          <% @cocktails.each do |cocktail| %>
+            <div class="card-deck m-3  ">
+            <%= render "card", cocktail: cocktail %>
+            </div>
+          <% end %>
+      </div>
     </div>
   </div>
-</div>
